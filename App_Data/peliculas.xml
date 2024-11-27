@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Peliculas>
+  <Pelicula Vista="✅">
+    <Titulo>El Padrino</Titulo>
+    <Director>Francis Ford Coppola</Director>
+    <Anio>1972</Anio>
+    <Genero>Drama</Genero>
+    <Calificacion>9.2</Calificacion>
+    <Estado>No vista</Estado>
+  </Pelicula>
+  <Pelicula Vista="✅">
+    <Titulo>El Señor de los Anillos</Titulo>
+    <Director>Peter Jackson</Director>
+    <Anio>2003</Anio>
+    <Genero>Fantasía</Genero>
+    <Calificacion>8.9</Calificacion>
+    <Estado>No vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>Matrix</Titulo>
+    <Director>Lana y Lilly Wachowski</Director>
+    <Anio>1999</Anio>
+    <Genero>Ciencia Ficción</Genero>
+    <Calificacion>8.7</Calificacion>
+    <Estado>No vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>La Lista de Schindler</Titulo>
+    <Director>Steven Spielberg</Director>
+    <Anio>1993</Anio>
+    <Genero>Drama</Genero>
+    <Calificacion>9.0</Calificacion>
+    <Estado>Vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>Star Wars IV</Titulo>
+    <Director>George Lucas</Director>
+    <Anio>1977</Anio>
+    <Genero>Ciencia Ficción</Genero>
+    <Calificacion>8.6</Calificacion>
+    <Estado>Vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>Parásitos</Titulo>
+    <Director>Bong Jo</Director>
+    <Anio>2011</Anio>
+    <Genero>Thriller</Genero>
+    <Calificacion>8.6</Calificacion>
+    <Estado>No vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>Buenos Muchachos</Titulo>
+    <Director>Nolan</Director>
+    <Anio>2018</Anio>
+    <Genero>Ciencia Ficcion</Genero>
+    <Calificacion>9.5</Calificacion>
+    <Estado>Vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>Odisea del espacio</Titulo>
+    <Director>Cubrick</Director>
+    <Anio>1986</Anio>
+    <Genero>Ciencia Ficcion</Genero>
+    <Calificacion>9.5</Calificacion>
+    <Estado>No vista</Estado>
+  </Pelicula>
+  <Pelicula>
+    <Titulo>Naranja mecanica</Titulo>
+    <Director>Nolan</Director>
+    <Anio>1986</Anio>
+    <Genero>Criminal</Genero>
+    <Calificacion>9.5</Calificacion>
+    <Estado>No vista</Estado>
+  </Pelicula>
+</Peliculas>
