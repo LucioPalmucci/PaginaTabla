@@ -14,7 +14,8 @@
         <div>
             <div runat="server" class="text-center">
                 <h1 runat="server" class="w-100">Peliculas Famosas</h1>
-                <div runat="server" class="justify-content-center d-flex text-start">
+                <asp:button onclick="mostrarTabla" class="btn btn-primary" runat="server" Text="Mostrar"></asp:button><br />
+                <div runat="server" class="justify-content-center d-flex text-start" Visible="false" id="contTabla">
                     <asp:Literal ID="Tabla" runat="server"/>
                 </div>
             </div>
@@ -42,10 +43,23 @@
                             <asp:TextBox ID="ediAño" runat="server" CssClass="form-control" placeholder="Año de la pelicula" />
                             <asp:TextBox ID="ediGenero" runat="server" CssClass="form-control" placeholder="Genero de la pelicula" />
                             <asp:TextBox ID="ediCalificacion" runat="server" CssClass="form-control" placeholder="Calificación de la pelicula" /><br />
-                            <asp:Button ID="btnEditar" runat="server" Text="Agregar" CssClass="btn btn-primary" OnClick="btnEditar_Click" />
+                            <asp:Button ID="btnEditar" runat="server" Text="Confirmar" CssClass="btn btn-primary" OnClick="btnEditar_Click" />
                          </div>
                      </div>
                 </div>
+            </div>
+            <div>
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered w-75 fs-7 m-2" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
+                    <Columns>
+                        <asp:BoundField DataField="Titulo" HeaderText="Titulo" ReadOnly="false"  />
+                        <asp:BoundField DataField="Director" HeaderText="Director" />
+                        <asp:BoundField DataField="Anio" HeaderText="Año" />
+                        <asp:BoundField DataField="Genero" HeaderText="Genero" />
+                        <asp:BoundField DataField="Calificacion" HeaderText="Calificacion" />
+                        <asp:ButtonField ButtonType="Button" CommandName="Editar" Text="Editar" />
+                        <asp:ButtonField ButtonType="Button" CommandName="Eliminar" Text="Eliminar" />
+                    </Columns>
+                </asp:GridView>
             </div>
         </div>
     </form>

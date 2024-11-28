@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Xml.Xsl;
 using System.Xml;
 using System.IO;
+using System.Data;
 
 namespace WebApplication1
 {
@@ -15,6 +16,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             TransformXmlToHtml();
+            generateTable();
             if (Request.QueryString["eliminar"] != null && !IsPostBack)
             {
                 string titulo = Request.QueryString["eliminar"];
@@ -25,9 +27,17 @@ namespace WebApplication1
                 string titulo = Request.QueryString["vista"];
                 vistaPelicula(titulo);
             }
+            if (!IsPostBack)
+            {
+                contTabla.Visible = true;
+            }
         }
 
-        
+        public void mostrarTabla(object sender, EventArgs e)
+        {
+            if (contTabla.Visible == true) contTabla.Visible = false;
+            else contTabla.Visible = true;
+        }
 
         private void TransformXmlToHtml()
         {
@@ -49,6 +59,7 @@ namespace WebApplication1
                 // Muestra el resultado en el String
                 Tabla.Text = sw.ToString();
             }
+            generateTable();
         }
         public void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -151,6 +162,23 @@ namespace WebApplication1
 
             xmlDoc.Save(xmlPath);
            TransformXmlToHtml();
+
+        }
+
+        public void generateTable()
+        {
+            string xmlPath = Server.MapPath("~/App_Data/peliculas.xml");
+
+            DataSet ds = new DataSet();
+            ds.ReadXml(xmlPath);
+
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+        }
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            generateTable();
         }
     }
 }
